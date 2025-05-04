@@ -1,0 +1,473 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* background-color: #f2f2f2; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(244, 234, 255);
+    padding: 20px;
+
+    h1{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: rgb(244, 234, 255);
+    }
+    p{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: rgb(15, 6, 24);
+        font-size: 20px;
+    }
+
+}
+
+/*====== Header start ======*/
+.header-one{
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* background-color: #7c8287; */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nav bar start */
+.nav-bar{
+    /* background-color: antiquewhite; */
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.company-name{
+    color: rgb(244, 234, 255);
+    font-size: 60px;
+    margin-left: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.name-section{
+    width: 10%;
+    height: auto;
+    /* background-color: rgb(187, 191, 191); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.nav-btn-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* background-color: #f2f2f2; */
+    width: 33%;
+}
+
+.btn{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    /* width: wrap-content; */
+    height: auto;
+    border: none;
+    background: none;
+    color: rgb(244, 234, 255);
+    cursor: pointer;
+}
+
+video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Nav bar end */
+
+/* Header content */
+.header-content{
+    width: 40%;
+    margin-top: 40px;
+    margin-left: 32%;
+    cursor: default;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    
+    p{
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: rgb(244, 234, 255);
+        text-align: center;
+        margin-top: 20px;
+        /* background-color: aliceblue; */
+    }
+}
+h1{
+    cursor: default;
+    font-size: 60px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(243, 243, 243);
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Header content end */
+
+.scroll-down{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-size: 30px;
+    animation: bounce 2s infinite;
+    justify-content: flex-end;
+    /* margin-top: 350px; */
+}
+
+/*====== Header end =====*/
+
+/* ======== Main content start ======== */
+.main-content{
+    top: 10px;
+    font-size: 70px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+/* Heading and paragraph */
+.main-benefits{
+    color: black;
+    p{
+        margin-top: 70px;
+        color: rgb(68, 59, 59);
+        font-size: 20px;
+        font-weight: 100;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
+/* paragraph after heading */
+.main-benefits-content{
+    width: 40%;
+    margin-left: 30%;
+}
+
+/* Display cards */
+.cards{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 10%;
+    p{
+        color:rgb(71, 65, 65)
+    }
+    h2{
+        color:rgb(68, 59, 59);
+    }
+}
+
+.card1{
+    width: 25%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    color: black;
+    padding: 15px;
+}
+
+.card{
+    margin-top: 0%;
+    padding: 0px;
+    h2{
+        margin-top: 0%;
+        padding: 0px;
+    }
+    p{
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
+
+/* Main content end */
+
+/* Products section */
+.products{
+
+    margin-top: 20px;
+    margin-bottom: 90px;
+    h1{
+        color:black;
+    }
+    p{
+        color:black;
+    }
+}
+
+.products-content{
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: antiquewhite; */
+    text-align: center;
+}
+
+.products-cards{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.products-card{
+    width: 25%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    color: black;
+    padding: 15px;
+    position: relative;
+}
+
+.product-image{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+/* Products section end */
+
+/* Testimonials section */
+
+.testimonials{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 90px;
+
+    h1{
+        color:black;
+    }
+    p{
+        color:black;
+    }
+}
+
+.testimonials-cards{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.testimonial-card{
+    width: 25%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    color: black;
+    padding: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Testimonials section end */
+
+/* Get in touch section start */
+
+.get-in-touch{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 90px;
+
+    h1{
+        color:black;
+    }
+    p{
+        color:black;
+    }
+}
+
+.get-in-touch-content{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: antiquewhite; */
+    text-align: center;
+}
+
+.get-in-touch-form{
+    width: 80%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+    padding: 10px;
+    position: relative;
+}
+
+.input1{
+    width: 900px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.send-btn{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #65a9ee;
+    color: white;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Get in touch section end */
+
+/* Download section */
+.download-section{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    h1{
+        color:black;
+    }
+    p{
+        color:black;
+    }
+}
+
+.download-heading{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: antiquewhite; */
+    text-align: center;
+}
+
+.download-content{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: antiquewhite; */
+    text-align: center;
+}
+
+.download-buttons{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: antiquewhite; */
+    text-align: center;
+    /* margin-left: 30px; */
+}
+
+.appstore-btn{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #13202d;
+    color: white;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.playstore-btn{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #13202d;
+    color: white;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    margin-top: 20px;
+}
+/* Download section end */
+
+/* Footer */
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: #b5b9bb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: black;
+    padding: 40px;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+}
+
+.links{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: antiquewhite; */
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.link1{
+    color: black;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+}
+/* Footer end */
