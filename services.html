@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avensora</title>
+    <link rel="icon" href="assets/icons/letter-a.png" type="image/png" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        .card-wrapper {
+            cursor: pointer;
+        }
+
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(5px);
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 9998;
+            display: none;
+        }
+
+        .service-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            z-index: 9999;
+            display: none;
+        }
+
+        .service-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand fw-bold text-primary" href="#">Avensora</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#courses">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#mentors">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#our-projects">Our Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#testimonial">Testimonial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- our services -->
+    <section class="py-5">
+        <div class="container pt-lg-5 p-lg-5">
+            <h3 class="fw-bold mb-4 text-primary">Our Services</h3>
+
+            <h2 class="text-center fw-bold mb-3 text-primary">"Your Vision, Our Code — Websites That Work Wonders."</h2>
+            <p class="text-center text-muted mb-5">Choose a topic below to learn how we can help.</p>
+
+
+            <div class="row g-4">
+
+                <!-- card 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center p-3 card-wrapper shadow-sm bg-white" onclick="showPopup(0)">
+                        <img src="https://img.icons8.com/ios-filled/50/behavior.png" class="mx-auto mb-2" />
+                        <h6 class="fw-bold text-primary">Custom Personal Websites</h6>
+                        <p class="small text-muted">Custom Designs That Speak Your Story</p>
+                        <p class="small text-muted">Every website we create is tailored to reflect your unique identity,
+                            ensuring you stand out online.</p>
+                    </div>
+                </div>
+
+                <!-- card 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center p-3 card-wrapper shadow-sm bg-white" onclick="showPopup(1)">
+                        <img src="https://img.icons8.com/ios-filled/50/child.png" class="mx-auto mb-2" />
+                        <h6 class="fw-bold text-primary">Professional Business Portfolios</h6>
+                        <p class="small text-muted">Mobile-First & Lightning Fast</p>
+                        <p class="small text-muted">Seamless experience on any device, delivering speed that keeps your
+                            visitors hooked.</p>
+                    </div>
+                </div>
+
+                <!-- card 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center p-3 card-wrapper shadow-sm bg-white" onclick="showPopup(2)">
+                        <img src="https://img.icons8.com/ios-filled/50/child.png" class="mx-auto mb-2" />
+                        <h6 class="fw-bold text-primary">High-Conversion E-Commerce Platforms</h6>
+                        <p class="small text-muted">Built to Grow With You.</p>
+                        <p class="small text-muted">From personal portfolios to scalable e-commerce, we design flexible
+                            solutions that evolve with your business.</p>
+                    </div>
+                </div>
+
+                <!-- card 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center p-3 card-wrapper shadow-sm bg-white" onclick="showPopup(3)">
+                        <img src="https://img.icons8.com/ios-filled/50/child.png" class="mx-auto mb-2" />
+                        <h6 class="fw-bold text-primary">Smart Websites for Small Businesses</h6>
+                        <p class="small text-muted">Integrated & Hassle-Free.</p>
+                        <p class="small text-muted">Connect effortlessly with popular tools like Shopify, WooCommerce,
+                            and marketing platforms for smooth operations.</p>
+                    </div>
+                </div>
+
+                <!-- card 5 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center p-3 card-wrapper shadow-sm bg-white" onclick="showPopup(4)">
+                        <img src="https://img.icons8.com/ios-filled/50/child.png" class="mx-auto mb-2" />
+                        <h6 class="fw-bold text-primary">Digital Marketing Solutions</h6>
+                        <p class="small text-muted">Affordable Excellence.</p>
+                        <p class="small text-muted">Premium quality without the premium price — perfect for startups,
+                            small businesses, and personal brands.</p>
+                    </div>
+                </div>
+
+                <!-- card 6 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center p-3 card-wrapper shadow-sm bg-white" onclick="showPopup(5)">
+                        <img src="https://img.icons8.com/ios-filled/50/child.png" class="mx-auto mb-2" />
+                        <h6 class="fw-bold text-primary">Website Redesign & Optimization</h6>
+                        <p class="small text-muted">SEO & Conversion Focused.</p>
+                        <p class="small text-muted">We don’t just build websites; we build lead-generating machines
+                            optimized for search engines and user engagement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popups -->
+            <div class="popup-overlay" onclick="closePopup()"></div>
+
+            <!-- card 1 pop-up -->
+            <div class="service-popup" id="popup0">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h5 class="fw-bold text-primary">Custom Personal Websites</h5>
+                <p class="text-muted text-primary">Tailored to reflect your identity or brand.</p>
+                <ol class="mt-3">
+                    <li>Unique designs that capture your personality or profession.</li>
+                    <li>Lightning-fast load times for a smooth user experience.</li>
+                    <li>Fully mobile-responsive — look great on any device.</li>
+                    <li>Easy-to-manage content (no coding required).</li>
+                    <li>Optimized for personal branding and SEO.</li>
+                    <li>Ideal for portfolios, resumes, artists, and freelancers.</li>
+                </ol>
+            </div>
+
+            <!-- card 2 pop-up -->
+            <div class="service-popup" id="popup1">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h5 class="fw-bold text-primary">Professional Business Portfolios</h5>
+                <p class="text-muted text-primary">Show off your work with class and clarity.</p>
+                <ol class="mt-3">
+                    <li>Sleek, professional layouts designed to impress clients.</li>
+                    <li>Build trust with testimonials, case studies, and contact forms.</li>
+                    <li>Showcase services, team bios, and past work elegantly.</li>
+                    <li>Designed to reflect your business values and brand tone.</li>
+                </ol>
+            </div>
+
+            <!-- card 3 pop-up -->
+            <div class="service-popup" id="popup2">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h5 class="fw-bold text-primary">High-Conversion E-Commerce Platforms</h5>
+                <p class="text-muted text-primary">Built to sell — fast, secure, and user-friendly.</p>
+                <ol class="mt-3">
+                    <li>Conversion-optimized layouts that drive more sales.</li>
+                    <li>Seamless payment gateways (Stripe, Razorpay, PayPal, etc.).</li>
+                    <li>Real-time inventory tracking and order management.</li>
+                    <li>Scalable design that grows with your product range.</li>
+                    <li>Mobile-friendly shopping experience.</li>
+                </ol>
+            </div>
+
+            <!-- card 4 pop-up -->
+            <div class="service-popup" id="popup3">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h5 class="fw-bold text-primary">Smart Websites for Small Businesses</h5>
+                <p class="text-muted text-primary">Affordable without cutting corners.</p>
+                <ol class="mt-3">
+                    <li>Budget-friendly solutions with premium quality.</li>
+                    <li>Targeted for local SEO to help you get found nearby.</li>
+                    <li>Simple admin dashboard for self-updates.</li>
+                    <li>Great for cafes, clinics, consultants, and more.</li>
+                </ol>
+            </div>
+
+            <!-- card 5 pop-up -->
+            <div class="service-popup" id="popup4">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h5 class="fw-bold text-primary">Digital Marketing Solutions</h5>
+                <p class="text-muted text-primary">Grow your brand across Google, Meta & more.</p>
+                <ol class="mt-3">
+                    <li>Targeted ad campaigns that bring real traffic and leads.</li>
+                    <li>Google Ads, Facebook & Instagram promotions managed for you.</li>
+                    <li>SEO strategies to improve search visibility and ranking.</li>
+                    <li>Social media content planning and design.</li>
+                </ol>
+            </div>
+
+            <!-- card 6 pop-up -->
+            <div class="service-popup" id="popup5">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h5 class="fw-bold text-primary">Website Redesign & Optimization</h5>
+                <p class="text-muted text-primary">Give your site a fresh, modern look.</p>
+                <ol class="mt-3">
+                    <li>Modern UI/UX revamp to boost engagement.</li>
+                    <li>Speed optimization to reduce bounce rates.</li>
+                    <li>On-page SEO upgrades for better ranking.</li>
+                    <li>Improved navigation and structure for better usability.</li>
+                </ol>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center text-md-start py-4 bg-light">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- Branding & Social Icons -->
+                <div class="col-12 col-md-3">
+                    <h5>Avensora</h5>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-2">
+                        <a href="#">📘</a>
+                        <a href="#">🐦</a>
+                        <a href="#">📸</a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="col-6 col-md-3">
+                    <h6>Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-decoration-none text-dark">Home</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Services</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Portfolio</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Team</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Testimonials</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Other Links -->
+                <div class="col-6 col-md-3">
+                    <h6>Other</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-dark">About Us</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Our Team</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Career</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Services</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-12 col-md-3">
+                    <h6>Contact</h6>
+                    <p class="mb-1">KL 40 Perumbavoor, Ernakulam, Kerala</p>
+                    <p class="mb-1">+91 790 229 8803 <br>+91 963 337 2014 </p>
+                    <p class="mb-0">info@avensora.in</p>
+                </div>
+            </div>
+
+            <hr class="my-4" />
+            <p class="text-center small mb-0">©2025 Avensora. Crafted with passion.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPopup(index) {
+            document.querySelector(".popup-overlay").style.display = "block";
+            document.querySelectorAll(".service-popup").forEach(popup => popup.style.display = "none");
+            document.getElementById(`popup${index}`).style.display = "block";
+        }
+
+        function closePopup() {
+            document.querySelector(".popup-overlay").style.display = "none";
+            document.querySelectorAll(".service-popup").forEach(popup => popup.style.display = "none");
+        }
+    </script>
+
+</body>
+
+</html>
