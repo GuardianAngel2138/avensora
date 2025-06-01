@@ -5,19 +5,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Avensora</title>
+  <!-- Favicon -->
   <link rel="icon" href="assets/icons/letter-a.png" type="image/png" />
+
+  <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Your Custom CSS -->
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -494,45 +498,54 @@
   </footer>
 
 
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-  <script>
-    const swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        0: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        992: { slidesPerView: 3 },
-      }
-    });
-  </script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-  <script>
-    AOS.init({ duration: 1000 });
-  </script>
+<!-- EmailJS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <script>
+<!-- Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Swiper Init -->
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      992: { slidesPerView: 3 },
+    }
+  });
+</script>
+
+<!-- AOS Init -->
+<script>
+  AOS.init({ duration: 1000 });
+</script>
+
+<!-- EmailJS Contact Form -->
+<script>
   emailjs.init("5GRESbbht22YcLwVN"); // Your public key
 
   document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
-
     emailjs.sendForm("service_b029rkh", "template_16nvkrk", this)
       .then(() => {
         Swal.fire({
@@ -541,8 +554,7 @@
           text: 'Thanks for reaching out. We’ll get back to you shortly.',
           confirmButtonColor: '#0d6efd'
         });
-
-        this.reset(); // optional: clear the form
+        this.reset();
       })
       .catch((error) => {
         Swal.fire({
@@ -554,9 +566,6 @@
       });
   });
 </script>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 
